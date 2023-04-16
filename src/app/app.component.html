@@ -1,8 +1,21 @@
-<input type="file" style="display: none;" #cargador>
-<button (click)="cargador.click()">Cargar archivo</button>
+<app-menu></app-menu>
 
-<h2>En cines</h2>
-<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
+<div class="contenedor">
 
-<h2>Próximos estrenos</h2>
-<app-listado-peliculas [peliculas]="peliculasProximosEstrenos"></app-listado-peliculas>
+    <!-- <div>
+        <input type="checkbox" (change)="ocultar = !ocultar"/> Ocultar
+    </div>
+    <input type="text" (input)="title = $event.target.value">
+    <app-ciclo-de-vida *ngIf="ocultar" [titulo]="title"></app-ciclo-de-vida> -->
+
+    <!-- <app-rating (rated)="manejarRated($event)"></app-rating> -->
+    <!--se pasa el valor enviado por (rated) a $event-->
+    <!-- <input type="file" style="display: none;" #cargador>
+    <button (click)="cargador.click()">Cargar archivo</button> -->
+
+    <h2>En cines</h2>
+    <app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
+
+    <h2>Próximos estrenos</h2>
+    <app-listado-peliculas [peliculas]="peliculasProximosEstrenos"></app-listado-peliculas>
+</div>

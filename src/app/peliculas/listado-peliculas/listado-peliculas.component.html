@@ -4,9 +4,14 @@
     </ng-container>
     
     <ng-container contenido>
-        <div *ngFor = "let pelicula of peliculas let index = index" class="pelicula-contenedor">
+        <div *ngFor = "let pelicula of peliculas let index = index" 
+        class="pelicula-contenedor">
             <div>
-            Pelicula {{index}}: {{pelicula.titulo}}<button style="margin-left:1rem"(click)="remover(index)">Remover</button>
+                <h2>Pelicula {{index}}: {{pelicula.titulo}}
+                    <button style="margin-left:1rem"(click)="remover(index)">
+                        Remover
+                    </button>
+                </h2>
             </div>
             <div>
             

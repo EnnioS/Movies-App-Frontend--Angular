@@ -17,7 +17,18 @@ export class AppComponent implements OnInit {
         titulo : "Mohana",
         fechaLanzamiento : new Date("2012-10-14"),
         precio : 245.99
-      }];
+      },
+      {
+        titulo : "Spider-man",
+        fechaLanzamiento : new Date(),
+        precio : 1899.04
+      },
+      {
+        titulo : "Mohana",
+        fechaLanzamiento : new Date("2012-10-14"),
+        precio : 245.99
+      },
+    ];
 
       this.peliculasProximosEstrenos=[{
         titulo : "Avenger: Endgams",
@@ -40,7 +51,11 @@ export class AppComponent implements OnInit {
    
   }
   title = 'Front-end';
-
+  ocultar = false;
   peliculasEnCines;
   peliculasProximosEstrenos;
+
+  manejarRated(voto: number): void{
+    alert(voto);
+  }
 }
