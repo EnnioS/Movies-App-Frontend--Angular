@@ -1,16 +1,8 @@
-<div>
-  {{title}}
-</div>
-<h2>Datos de la pelicula</h2>
-<div *ngFor = "let pelicula of peliculas let index = index" class="pelicula-contenedor">
-  <div>
-    Pelicula: {{index}}{{pelicula.titulo}}
-  </div>
-  <div>
-    
-    {{pelicula.fechaLanzamiento | date:"dd-MM-yyyy" | uppercase}}
-  </div>
-  <div>
-    {{pelicula.precio | currency:"C$"}}
-  </div>
-</div>
+<input type="file" style="display: none;" #cargador>
+<button (click)="cargador.click()">Cargar archivo</button>
+
+<h2>En cines</h2>
+<app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
+
+<h2>Próximos estrenos</h2>
+<app-listado-peliculas [peliculas]="peliculasProximosEstrenos"></app-listado-peliculas>
